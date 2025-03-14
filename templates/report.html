@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="jumbotron">
+  <p>Let's see how u performed!!</p>
+
+  {% if report %}
+  <p>Your username passed the 4 requirements!</p>
+  {% else %}
+  <ul>
+    {% if not lower %}
+    <li>You did not use a lowercase letter</li>
+    {% endif %} {% if not upper %}
+    <li>You did not use an uppercase letter</li>
+    {% endif %} {% if not contains_digit %}
+    <li>You did not have a digit in username</li>
+    {% endif %} {% if not contains_special %}
+    <li>You did not have special character in username</li>
+    {% endif %}
+  </ul>
+  {% endif %}
+</div>
+
+{% endblock %}
