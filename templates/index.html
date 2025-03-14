@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="jumbotron">
+  <p>Username Strength Tester</p>
+  <p>Let's see if your user name is secure!</p>
+  <p>Fill up the form below with a User Name that has these restrictions:</p>
+  <ol>
+    <li>Must have an upper case letter somewhere</li>
+    <li>Must have a lower case letter somewhere</li>
+    <li>Must have a digit somewhere</li>
+    <li>Must have character somewhere</li>
+  </ol>
+  <form action="{{url_for('report')}}">
+    <label for="username">username:</label>
+    <input type="text" name="username" />
+    <input type="submit" value="Submit form" />
+  </form>
+</div>
+
+{% endblock %}
